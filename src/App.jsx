@@ -1,19 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import "./App.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from "./Nav";
 import Home from "./pages/Home";
+import Login from "./Login";
+
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
+    
       <Nav/>
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} /> 
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 

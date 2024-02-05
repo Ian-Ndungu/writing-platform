@@ -1,22 +1,27 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from "./Nav";
-import Home from "./pages/Home";
-import Login from "./Login";
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/landing/Home";
+import Login from "./pages/auth/Login";
+import MainLayout from "./layouts/MainLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Dashboard from "./pages/dashboard/Dashboard";
+import CreateOrder from "./pages/create-order/CreateOrder";
 
 const App = () => {
   return (
-    <BrowserRouter>
-    
-      <Nav/>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<Home />} /> 
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+        </Route>
+
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/dashboard/create-order" element={<CreateOrder />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

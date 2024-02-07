@@ -34,15 +34,13 @@ const Footer = () => {
         <div>
           <p><a href="/" className="text-white ">Europe</a></p>
           <p><a href="/" className="text-white ">Nigeria</a></p>
-          <p><a href="/" className="text-white ">Pa</a></p>
+          <p><a href="/" className="text-white ">Pakistan</a></p>
           <p><a href="/" className="text-white ">Philippines</a></p>
         </div>
     </div>
     <p className="text-white mt-4 sm:mt-0">&copy; 2023 Andika. All rights reserved.</p>
 </div>
-
-
-    
+  
   </div>;
 };
 

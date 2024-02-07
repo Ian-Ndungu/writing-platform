@@ -2,9 +2,18 @@ import React from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import { Avatar } from "rsuite";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 function Navigation() {
+  const { auth, setAuth } = useAuth();
+  const navigate = useNavigate()
+
+  const logout = () => {
+    localStorage.clear();
+    setAuth({});
+    navigate("/");
+  };
   const items = [
     {
       label: "Account",
@@ -13,12 +22,13 @@ function Navigation() {
     {
       label: "Logout",
       key: "1",
+      onClick: logout,
     },
   ];
   return (
-    <div className="w-[100%] fixed top-0 z-50 h-[120px] border-b-[1px] shadow-md">
-      <div className="flex items-center w-full h-full justify-between w-[95%] mx-auto">
-        <div className="font-bold">ANDIKA</div>
+    <div className="w-[100%] fixed top-0 z-50 h-[120px] bg-white border-b-[1px] shadow-md">
+      <div className="flex items-center h-full justify-between w-[95%] mx-auto">
+        <div className="font-bold">TopRatedWriters</div>
         <nav className="flex font-bold">
           <ul className="flex items-center gap-[20px]">
             <NavLink to="/" className="text-[16px]">
@@ -34,7 +44,13 @@ function Navigation() {
               Reporting
             </NavLink>
             <NavLink to="users" className="text-[16px]">
-              User
+              Clients
+            </NavLink>
+            <NavLink to="wallet" className="text-[16px]">
+              My Wallet
+            </NavLink>
+            <NavLink to="writers" className="text-[16px]">
+              Writers
             </NavLink>
           </ul>
         </nav>
@@ -92,7 +108,7 @@ function Navigation() {
                   src="https://avatars.githubusercontent.com/u/15609339"
                   alt="@hiyangguo"
                 />
-                Profile
+                {auth?.user?.name.length > 0 ? auth?.user?.name : "Account"}
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

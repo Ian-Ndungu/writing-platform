@@ -11,10 +11,10 @@ const DashboardLayout = () => {
         <Navigation />
       </div>
       <div className="flex w-[95%] mx-auto mt-[140px]">
-        <div className="w-[25%]">
+        <div className="w-[20%]">
           <LeftBar />
         </div>
-        <div className="w-[75%]">
+        <div className="w-[80%]">
           <Outlet />
         </div>
       </div>

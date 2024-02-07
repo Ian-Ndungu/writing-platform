@@ -6,6 +6,9 @@ import MainLayout from "./layouts/MainLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import CreateOrder from "./pages/create-order/CreateOrder";
+import AuthLayout from "./layouts/AuthLayout";
+import AllOrders from "./pages/all-orders/AllOrders";
+import MyOrders from "./pages/my-orders/MyOrders";
 
 const App = () => {
   return (
@@ -13,12 +16,17 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+        </Route>
+
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="/auth/login" element={<Login />} />
         </Route>
 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="/dashboard/create-order" element={<CreateOrder />} />
+          <Route path="/dashboard/all-orders" element={<AllOrders />} />
+          <Route path="/dashboard/my-orders" element={<MyOrders />} />
         </Route>
       </Routes>
     </>

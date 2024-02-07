@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../pages/footer/Footer";
 
-const MainLayout = () => {
+const AuthLayout = () => {
   return (
     <>
       <div>
@@ -19,4 +19,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default AuthLayout;

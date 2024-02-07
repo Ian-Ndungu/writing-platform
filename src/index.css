@@ -6,12 +6,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif !important;
 }
 
 a {
   color: black !important;
+  text-decoration: none !important;
 }
 a.active {
-  color: blue !important;
-  text-decoration: none;
+  color: #0177d5 !important;
+  text-decoration: none !important;
+}
+
+.error {
+  color: red;
 }

@@ -8,9 +8,9 @@ function Home() {
   return (
    <>
     <div >
-      <div className="w-full border-2  flex justify-between mt-[140px] mb-[24px] px-[20px]">
+      <div className="w-full   flex justify-between mt-[140px] mb-[24px] px-[20px]">
         <div className="w-[50%]">
-          fzmxhgj
+          <img src="/character2.3a302aa5.svg" alt="screen" />
         </div>
        <div className="w-[40%]">
         <Calculator/>

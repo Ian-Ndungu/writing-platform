@@ -9,9 +9,9 @@ body {
 }
 
 a {
-  color: black !important;
+  color: black;
 }
 a.active {
-  color: blue !important;
+  color: blue ;
   text-decoration: none;
 }

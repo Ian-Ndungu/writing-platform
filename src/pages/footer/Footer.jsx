@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return <div className="bg-gray-900 mb-[1px] border-2">
     
-    <div className="flex flex-wrap justify-between ">
+    <div className="flex flex-wrap justify-between p-[60px] ">
       <div className="w-full sm:w-auto">
         <div>
           <p><a href="/privacy-policy" className="text-white ">Privacy Policy</a></p>

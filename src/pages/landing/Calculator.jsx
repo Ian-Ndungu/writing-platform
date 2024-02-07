@@ -34,13 +34,13 @@ const Calculator = () => {
   };
 
   return (
-    <div className="w-[40%]">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="border flex items-center justify-center w-full border-gray-300 p-[20px]">
+      <form onSubmit={handleSubmit} className="w-full">
         <div className='w-full'>
           <label htmlFor="service" className="block text-gray-700">Services:</label>
           <select
             id="service"
-            className="form-select h-10 mt-1 block w-[95%] rounded-md border-2"
+            className="form-select h-10 mt-1 block w-[100%] rounded-md border-2"
             required
             value={service}
             onChange={handleServiceChange}
@@ -55,7 +55,7 @@ const Calculator = () => {
           <label htmlFor="paperType" className="block text-gray-700">Type of paper:</label>
           <select
             id="paperType"
-            className="form-select h-10 mt-1 block w-[95%] rounded-md border-2"
+            className="form-select h-10 mt-1 block w-[100%] rounded-md border-2"
             required
             value={paperType}
             onChange={handlePaperTypeChange}
@@ -70,7 +70,7 @@ const Calculator = () => {
           <label htmlFor="urgency" className="block text-gray-700">Urgency:</label>
           <select
             id="urgency"
-            className="form-select h-10 mt-1 block w-[95%] rounded-md border-2"
+            className="form-select h-10 mt-1 block w-[100%] rounded-md border-2"
             required
             value={urgency}
             onChange={handleUrgencyChange}
@@ -85,7 +85,7 @@ const Calculator = () => {
           <label htmlFor="pages" className="block text-gray-700">Pages:</label>
           <select
             id="pages"
-            className="form-select h-10 mt-1 block w-[95%] rounded-md border-2"
+            className="form-select h-10 mt-1 block w-[100%] rounded-md border-2"
             required
             value={pages}
             onChange={handlePagesChange}
@@ -100,7 +100,7 @@ const Calculator = () => {
           <label htmlFor="level" className="block text-gray-700">Level:</label>
           <select
             id="level"
-            className="form-select h-10 mt-1 block w-[95%] rounded-md border-2"
+            className="form-select h-10 mt-1 block w-[100%] rounded-md border-2"
             required
             value={level}
             onChange={handleLevelChange}
@@ -111,7 +111,7 @@ const Calculator = () => {
             <option value="advanced">Advanced</option>
           </select>
         </div>
-        <button type="submit" className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-[95%]">
+        <button type="submit" className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-[100%] mt-4">
           Continue
         </button>
       </form>

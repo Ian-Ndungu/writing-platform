@@ -8,8 +8,13 @@ function Home() {
   return (
    <>
     <div >
-      <div className="w-full border-2 flex justify-end">
+      <div className="w-full border-2  flex justify-between mt-[140px] mb-[24px] px-[20px]">
+        <div className="w-[50%]">
+          fzmxhgj
+        </div>
+       <div className="w-[40%]">
         <Calculator/>
+       </div>
       </div>
     </div>
     <div className="p-8">

@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { Avatar, AvatarGroup } from "rsuite";
+import Calculator from "./Calculator";
 
 function Home() {
   const [showOverview, setShowOverview] = useState("customer-overview");
 
   return (
+   <>
+    <div >
+      <div className="w-full border-2 flex justify-end">
+        <Calculator/>
+      </div>
+    </div>
     <div className="p-8">
       <h1 className="text-4xl font-bold mb-4">Customers</h1>
 
@@ -360,6 +367,7 @@ function Home() {
         </div>
       )}
     </div>
+  </>
   );
 }
 

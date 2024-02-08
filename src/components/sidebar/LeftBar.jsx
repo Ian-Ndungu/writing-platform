@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const LeftBar = () => {
   return (
-    <div className="h-[70vh] flex flex-col gap-[20px]">
+    <div className="h-[70vh] flex flex-col gap-[20px] text-[#000]">
       <div className="flex items-center gap-[5px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"

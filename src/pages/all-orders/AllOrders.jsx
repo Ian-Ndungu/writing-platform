@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getOrders } from "../../sdk/orders/orders";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
+  const navigate = useNavigate();
 
   const fetchOrders = async () => {
     try {
@@ -19,6 +21,10 @@ const AllOrders = () => {
   useEffect(() => {
     fetchOrders();
   }, []);
+
+  const navigateToOrder = (id) => {
+    navigate(`/dashboard/orders/${id}`);
+  };
   return (
     <div>
       <p className="mb-[10px] text-[16px] font-bold">All Orders</p>
@@ -36,8 +42,9 @@ const AllOrders = () => {
         {orders &&
           orders.map((order, index) => (
             <div
+              onClick={() => navigateToOrder(order?.order_id)}
               key={order?.order_id}
-              className="flex items-center min-h-[50px] bg-white text-[#000] px-[10px]"
+              className="flex items-center cursor-pointer min-h-[50px] bg-white text-[#000] px-[10px]"
             >
               <p className="w-[7%]">{index + 1}</p>
               <p className="w-[8%]">{order?.order_id}</p>

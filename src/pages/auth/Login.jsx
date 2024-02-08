@@ -52,7 +52,7 @@ const Login = () => {
         loginFormik.resetForm();
         toast.success("Welcome to TopRatedWriters");
         setAuth({ user: response?.data });
-        navigate("/dashboard");
+        navigate("/dashboard/all-orders");
         setSubmittingLogin(false);
       }
     } catch (error) {

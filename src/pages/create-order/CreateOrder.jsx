@@ -221,12 +221,9 @@ const CreateOrder = () => {
         }
       }
     } catch (error) {
-      console.log(error);
       toast.error(error.response.data.message);
     }
   };
-
-  console.log(orderDetails);
 
   const handleNextReviewStep = () => {
     setCurrentStep(3);
@@ -237,12 +234,12 @@ const CreateOrder = () => {
   };
 
   return (
-    <div className="h-[70vh]">
+    <div className="h-[700px]">
       <div>
-        <p className="mb-[20px] font-bold text-[16px]">Create Order</p>
+        <p className="mb-[10px] font-bold text-[16px]">Create Order</p>
       </div>
-      <div className="flex h-full">
-        <div className="w-[20%] h-full border-2 border-r-0 p-[10px]">
+      <div className="flex h-[95%] border-2 shadow-md">
+        <div className="w-[20%] h-full border-r-2 p-[10px]">
           <Steps current={currentStep} vertical small>
             <Steps.Item title="Order Requirements" />
             <Steps.Item title="Instructions" />
@@ -251,7 +248,7 @@ const CreateOrder = () => {
           </Steps>
         </div>
         {currentStep === 0 && (
-          <div className="w-[80%] border-2 p-[20px] h-full">
+          <div className="w-[80%] p-[20px] h-full">
             <p className="mb-[20px] text-[16px] font-bold">
               Enter order details
             </p>

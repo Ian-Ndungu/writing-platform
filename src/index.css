@@ -22,3 +22,8 @@ a.active {
 .error {
   color: red;
 }
+select {
+  /* padding-right: 10px !important; */
+}
+
+

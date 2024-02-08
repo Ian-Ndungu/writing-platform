@@ -14,6 +14,8 @@ import OrderMessage from "./pages/order-message/OrderMessage";
 import OrderFiles from "./pages/order-files/OrderFiles";
 import OrderRevision from "./pages/order-revision/OrderRevision";
 import AdditionalInformation from "./pages/order-more-info/AdditionalInformation";
+import UserDashboard from "./layouts/UserDashboard";
+import MainDashboard from "./pages/user-dashboard/Dashboard";
 
 const App = () => {
   return (
@@ -25,6 +27,9 @@ const App = () => {
 
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="/auth/login" element={<Login />} />
+        </Route>
+        <Route path="/user-dashboard" element={<UserDashboard />}>
+          <Route index element={<MainDashboard />} />
         </Route>
 
         <Route path="/dashboard" element={<DashboardLayout />}>

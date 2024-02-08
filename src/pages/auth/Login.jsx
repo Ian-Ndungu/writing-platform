@@ -52,7 +52,13 @@ const Login = () => {
         loginFormik.resetForm();
         toast.success("Welcome to TopRatedWriters");
         setAuth({ user: response?.data });
-        navigate("/dashboard/all-orders");
+        if (response.data.role === "writer") {
+          navigate("/user-dashboard/all-orders");
+        } else if (response.data.role === "client") {
+          navigate("/dashboard/all-orders");
+        } else if (response.data.role === "admin") {
+          navigate("/admin/all-orders");
+        }
         setSubmittingLogin(false);
       }
     } catch (error) {

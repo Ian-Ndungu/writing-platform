@@ -2,8 +2,12 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
-        <div >
+    <div className='mt-[120px]'>
+        <div>
+            <div className="w-full bg-yellow-600 flex justify-between p-10">
+                <h1>About Us:</h1>
+                <button className="bg-yellow-600 hover:bg-yellow-700 border-2 text-white w-[180px] h-[44px] font-bold rounded">Log In</button>
+            </div>
             <div className="w-full   flex justify-between mt-[140px] mb-[24px] px-[20px]">
                 <div className="w-[50%]">
                     <img src="/aboutus-1.a6619af6.svg" alt="screen" />

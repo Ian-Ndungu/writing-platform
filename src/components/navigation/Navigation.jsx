@@ -18,7 +18,7 @@ function Navigation() {
   return (
     <div className="w-[100%] fixed top-0 z-50 h-[120px] border-b-[1px] shadow-md bg-white">
       <div className="flex items-center w-full h-full justify-between w-[95%] mx-auto">
-        <div className="font-bold">ANDIKA</div>
+        <div className="font-bold">TopRatedWriters</div>
         <nav className="flex font-bold">
           <ul className="flex items-center gap-[20px]">
             <NavLink to="/" className="text-[16px]">

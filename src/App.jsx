@@ -7,6 +7,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import CreateOrder from "./pages/create-order/CreateOrder";
 import About from "./pages/about/About";
+import Writers from "./pages/Writers/Writers";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/writers" element={<Writers/>} />
         </Route>
 
         <Route path="/dashboard" element={<DashboardLayout />}>

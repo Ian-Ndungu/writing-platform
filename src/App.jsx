@@ -8,6 +8,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import CreateOrder from "./pages/create-order/CreateOrder";
 import About from "./pages/about/About";
 import Writers from "./pages/Writers/Writers";
+import Prices from "./pages/prices/Prices";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/writers" element={<Writers/>} />
+          <Route path="/prices" element={<Prices/>} />
         </Route>
 
         <Route path="/dashboard" element={<DashboardLayout />}>

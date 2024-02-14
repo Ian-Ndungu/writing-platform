@@ -145,7 +145,7 @@ const Prices = () => {
                 </div>
             </div>
             <div>
-                <p>*The price indicated is the average that we recommend writers of our paper writing service charge. The final price may vary based on the complexity of the essay, academic level and your deadline.</p>
+                <p className="flex items-center text-[16px] ">*The price indicated is the average that we recommend writers of our paper writing service charge. The final price may vary based on the complexity of the essay, academic level and your deadline.</p>
             </div>
         </div>
         <div className="flex justify-between text-white bg-[#004ca0] p-[20px] rounded">
